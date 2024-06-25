@@ -12,12 +12,17 @@ def chia_bai_tap(so_bai_tap, hoc_sinh):
     so_bai_tap_moi_hoc_sinh = so_bai_tap // so_hoc_sinh
     so_du_bai_tap = so_bai_tap % so_hoc_sinh
     
+    # Xáo trộn danh sách học sinh để phân bổ số dư ngẫu nhiên
+    print("Học sinh sẽ nhận:",hoc_sinh)
+    hoc_sinh_random = hoc_sinh[:]
+    random.shuffle(hoc_sinh_random)
+    print("Học sinh sẽ nhận:",hoc_sinh)
     # Chia bài tập cho từng học sinh
     phan_bo_bai_tap = {}
     start = 0
     for i in range(so_hoc_sinh):
         end = start + so_bai_tap_moi_hoc_sinh + (1 if i < so_du_bai_tap else 0)
-        phan_bo_bai_tap[hoc_sinh[i]] = bai_tap[start:end]
+        phan_bo_bai_tap[hoc_sinh_random[i]] = bai_tap[start:end]
         start = end
     
     return phan_bo_bai_tap
@@ -36,8 +41,8 @@ def main():
     ket_qua_chia = chia_bai_tap(so_bai_tap, hoc_sinh)
 
     # In kết quả
-    for hs, bt in ket_qua_chia.items():
-        print(f"Bài tập của {hs} là {len(bt)} bài gồm có: {bt}")
+    for hs in hoc_sinh:
+        print(f"Bài tập của {hs} là {len(ket_qua_chia[hs])} bài, gồm có: {ket_qua_chia[hs]}")
 
 if __name__ == "__main__":
     main()
