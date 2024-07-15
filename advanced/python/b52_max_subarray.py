@@ -1,21 +1,59 @@
+'''
+https://leetcode.com/problems/maximum-subarray/description/
+Given an integer array nums, find the 
+subarray
+ with the largest sum, and return its sum.
 
-from typing import List
+ 
 
+Example 1:
 
-def maxSubArray(nums: List[int]) -> int:
-        max_total = 0
-        for i in range(0, len(nums)):
-            for j in range(i, len(nums)):
-                current_total = 0
-                for k in range(i, j+1):
-                    current_total += nums[k]
-                if current_total > max_total:
-                    max_total = current_total
-            
-        return max_total
+Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
+Output: 6
+Explanation: The subarray [4,-1,2,1] has the largest sum 6.
+Example 2:
 
-def main():
-    print(maxSubArray([-2,1,-3,4,-1,2,1,-5,4]))  
+Input: nums = [1]
+Output: 1
+Explanation: The subarray [1] has the largest sum 1.
+Example 3:
 
-if __name__ == "__main__":
-    main()
+Input: nums = [5,4,-1,7,8]
+Output: 23
+Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
+ 
+
+Constraints:
+
+1 <= nums.length <= 105
+-104 <= nums[i] <= 104
+ 
+
+Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
+'''
+
+def maxSubArray(nums):
+    max_sum = nums[0]
+    current_sum = nums[0]
+
+    for i in range(1, len(nums)):
+        if current_sum < 0:
+            current_sum = nums[i]
+        else:
+            current_sum += nums[i]
+        print(f"index: {i}, current_sum: {current_sum}, max_sum: {max_sum}")
+        if current_sum > max_sum:
+            max_sum = current_sum
+
+    return max_sum
+
+# Example usage:
+nums1 = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+print(maxSubArray(nums1)) 
+
+nums2 = [1]
+print(maxSubArray(nums2)) 
+
+nums3 = [-2,-3]
+print(nums3)
+print(maxSubArray(nums3)) 
