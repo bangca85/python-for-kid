@@ -41,7 +41,7 @@ def maxSubArray(nums):
             current_sum = nums[i]
         else:
             current_sum += nums[i]
-        print(f"index: {i}, current_sum: {current_sum}, max_sum: {max_sum}")
+        # print(f"index: {i}, current_sum: {current_sum}, max_sum: {max_sum}")
         if current_sum > max_sum:
             max_sum = current_sum
 
@@ -55,5 +55,5 @@ nums2 = [1]
 print(maxSubArray(nums2)) 
 
 nums3 = [-2,-3]
-print(nums3)
+# print(nums3)
 print(maxSubArray(nums3)) 
