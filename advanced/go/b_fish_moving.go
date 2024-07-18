@@ -18,7 +18,7 @@ type Fish struct {
 	Velocity int
 }
 
-func survivingFish(fishList []Fish) []Fish {
+func survivingFish2(fishList []Fish) []Fish {
 	stack := []Fish{}
 
 	for _, fish := range fishList {
@@ -65,9 +65,9 @@ func survivingFishLeftToRight(fishList []Fish) []Fish {
 	return survivors
 }
 
-func main() {
+func testSurvivingFish2() {
 	fishList := []Fish{{0, 2}, {3, -1}, {5, 4}, {6, -2}}
-	result := survivingFish(fishList)
+	result := survivingFish2(fishList)
 	fmt.Println("Surviving fish:")
 	for _, fish := range result {
 		fmt.Printf("Position: %d, Velocity: %d\n", fish.Position, fish.Velocity)

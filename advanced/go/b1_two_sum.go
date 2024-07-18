@@ -48,7 +48,7 @@ func twoSum(nums []int, target int) []int {
 	return nil // No solution found
 }
 
-func main() {
+func testTwoSum() {
 	nums1 := []int{2, 7, 11, 15}
 	target1 := 9
 	fmt.Println(twoSum(nums1, target1))

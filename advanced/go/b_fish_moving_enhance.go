@@ -14,11 +14,6 @@ import (
 	"fmt"
 )
 
-type Fish struct {
-	Position int
-	Velocity int
-}
-
 func survivingFish(fishList []Fish) []Fish {
 	leftQueue := list.New()
 	rightQueue := list.New()
@@ -56,7 +51,7 @@ func abs(x int) int {
 	return x
 }
 
-func main() {
+func testSurvivingFish() {
 	fishList := []Fish{{0, 2}, {3, -1}, {5, 4}, {6, -2}}
 	result := survivingFish(fishList)
 	fmt.Println("Surviving fish:")

@@ -51,7 +51,7 @@ func (s Solution) floodFill(image [][]int, sr int, sc int, color int) [][]int {
 	return image
 }
 
-func main() {
+func testFloodFill() {
 	image := [][]int{
 		{1, 1, 1},
 		{1, 1, 0},

@@ -48,7 +48,7 @@ func maxSubArray(nums []int) int {
 	return maxSum
 }
 
-func main() {
+func testMaxSubArray() {
 	nums1 := []int{-2, 1, -3, 4, -1, 2, 1, -5, 4}
 	fmt.Println(maxSubArray(nums1)) // Output: 6
 
