@@ -35,9 +35,26 @@ def canConstruct(ransomNote: str, magazine: str) -> bool:
     
     return True
 
+def canConstruct2(ransomNote: str, magazine: str) -> bool:
+    # Create a dictionary to count the frequency of each character in the magazine
+    magazine_count = {}
+    
+    for char in magazine:
+        if char in magazine_count:
+            magazine_count[char] += 1
+        else:
+            magazine_count[char] = 1
+    
+    # Check if ransomNote can be constructed
+    for char in ransomNote:
+        if char not in magazine_count or magazine_count[char] == 0:
+            return False
+        magazine_count[char] -= 1
+    
+    return True
 # Example usage:
-print(canConstruct("a", "b"))     
-print(canConstruct("aa", "ab"))    
-print(canConstruct("aa", "aab"))   
+print(canConstruct2("a", "b"))     
+print(canConstruct2("aa", "ab"))    
+print(canConstruct2("aa", "aab"))   
 
 # 
