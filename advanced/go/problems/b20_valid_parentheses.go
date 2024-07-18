@@ -29,9 +29,9 @@ Constraints:
 s consists of parentheses only '()[]{}'.
 */
 
-package main
+package problems
 
-func isValidParentheses(s string) bool {
+func IsValidParentheses(s string) bool {
 	// Map to hold matching pairs
 	matchingBracket := map[rune]rune{')': '(', '}': '{', ']': '['}
 	// Stack to keep track of opening brackets

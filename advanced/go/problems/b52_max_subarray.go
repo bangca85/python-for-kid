@@ -26,7 +26,7 @@ Constraints:
 1 <= nums.length <= 105
 -104 <= nums[i] <= 104
 */
-package main
+package problems
 
 import "fmt"
 

@@ -27,7 +27,7 @@ Constraints:
 0 <= prices[i] <= 104
 */
 
-package main
+package problems
 
 import (
 	"math"

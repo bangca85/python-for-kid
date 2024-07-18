@@ -20,7 +20,7 @@ Output: [[0,0,0],[0,0,0]]
 Explanation: The starting pixel is already colored 0, so no changes are made to the image.
 ”'
 */
-package main
+package problems
 
 import "fmt"
 

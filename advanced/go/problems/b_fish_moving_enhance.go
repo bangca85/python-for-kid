@@ -7,7 +7,7 @@ và di chuyển với một vận tốc nhất định. Nếu vận tốc là s�
 	nuốt con cá có vận tốc nhỏ hơn. Nếu vận tốc bằng nhau, cả hai con cá đều bị loại bỏ.
 */
 
-package main
+package problems
 
 import (
 	"container/list"

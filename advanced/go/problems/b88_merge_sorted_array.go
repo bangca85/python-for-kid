@@ -1,3 +1,5 @@
+package problems
+
 /*
 88. Merge Sorted Array
 Easy
@@ -30,7 +32,6 @@ Explanation: The arrays we are merging are [] and [1].
 The result of the merge is [1].
 Note that because m = 0, there are no elements in nums1. The 0 is only there to ensure the merge result can fit in nums1.
 */
-package main
 
 import "fmt"
 
@@ -57,7 +58,7 @@ func merge(nums1 []int, m int, nums2 []int, n int) {
 	}
 }
 
-func testMerge() {
+func TestMerge() {
 	nums1 := []int{1, 2, 3, 0, 0, 0}
 	m := 3
 	nums2 := []int{2, 5, 6}
