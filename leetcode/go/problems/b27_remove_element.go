@@ -1,4 +1,4 @@
-'''
+/*
 https://leetcode.com/problems/remove-element/
 
 Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
@@ -25,7 +25,7 @@ for (int i = 0; i < actualLength; i++) {
 }
 If all assertions pass, then your solution will be accepted.
 
- 
+
 
 Example 1:
 
@@ -40,36 +40,47 @@ Output: 5, nums = [0,1,4,0,3,_,_,_]
 Explanation: Your function should return k = 5, with the first five elements of nums containing 0, 0, 1, 3, and 4.
 Note that the five elements can be returned in any order.
 It does not matter what you leave beyond the returned k (hence they are underscores).
+*/
 
-'''
-from typing import List
+package problems
 
+import "fmt"
 
-def removeElement(nums: List[int], val: int) -> int:
-    lenNums = len(nums)
-    lsResult = []
-    for i in range(0,lenNums):
-        if nums[i] == val:
-            lsResult.append(i)   
-    for i in range(len(lsResult)-1,-1, -1):  
-        del nums[lsResult[i]]
-    return len(nums)
+func removeElement(nums []int, val int) int {
+	var lsResult []int
+	for i := 0; i < len(nums); i++ {
+		if nums[i] == val {
+			lsResult = append(lsResult, i)
+		}
+	}
+	for i := len(lsResult) - 1; i >= 0; i-- {
+		index := lsResult[i]
+		nums = append(nums[:index], nums[index+1:]...)
+	}
+	return len(nums)
+}
 
-def removeElement2(nums, val):
-    k = 0  # Con trỏ để giữ vị trí của phần tử tiếp theo không bằng `val`
+func removeElement2(nums []int, val int) int {
+	k := 0
 
-    for i in range(len(nums)):
-        if nums[i] != val:
-            nums[k] = nums[i]
-            k += 1
-    
-    return k
-nums1 = [3, 2, 2, 3]
-val1 = 3
-k1 = removeElement(nums1, val1)
-print(k1, nums1[:k1])  
+	for i := 0; i < len(nums); i++ {
+		if nums[i] != val {
+			nums[k] = nums[i]
+			k++
+		}
+	}
 
-nums2 = [0, 1, 2, 2, 3, 0, 4, 2]
-val2 = 2
-k2 = removeElement(nums2, val2)
-print(k2, nums2[:k2])  
+	return k
+}
+
+func TestRemoveElement() {
+	nums1 := []int{3, 2, 2, 3}
+	val1 := 3
+	k1 := removeElement(nums1, val1)
+	fmt.Println(k1, nums1) // Output: 2, [2, 2]
+
+	nums2 := []int{0, 1, 2, 2, 3, 0, 4, 2}
+	val2 := 2
+	k2 := removeElement(nums2, val2)
+	fmt.Println(k2, nums2) // Output: 5, [0, 1, 3, 0, 4]
+}

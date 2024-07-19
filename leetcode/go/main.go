@@ -7,5 +7,5 @@ import (
 
 func main() {
 	fmt.Println("Hello from main.go")
-	problems.TestMerge()
+	problems.TestRemoveElement()
 }
