@@ -54,8 +54,7 @@ func removeDuplicates(nums []int) int {
 		return 0
 	}
 
-	k := 1 // Bắt đầu từ 1 vì phần tử đầu tiên luôn duy nhất
-
+	k := 1
 	for i := 1; i < len(nums); i++ {
 		if nums[i] != nums[i-1] {
 			nums[k] = nums[i]
@@ -69,9 +68,9 @@ func removeDuplicates(nums []int) int {
 func TestRemoveDuplicates() {
 	nums1 := []int{1, 1, 2}
 	k1 := removeDuplicates(nums1)
-	fmt.Println(k1, nums1[:k1]) // Output: 2, [1, 2]
+	fmt.Println(k1, nums1[:k1])
 
 	nums2 := []int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}
 	k2 := removeDuplicates(nums2)
-	fmt.Println(k2, nums2[:k2]) // Output: 5, [0, 1, 2, 3, 4]
+	fmt.Println(k2, nums2[:k2])
 }
