@@ -1,4 +1,5 @@
 '''
+Bài 7:
 str = "50,60,70,80,90,100,110,120,130,140,150"
 1. In ra màn hình các phần tử là số chẵn.
 2. Sắp xếp mảng theo thứ tự tăng dần và in ra màn hình.
