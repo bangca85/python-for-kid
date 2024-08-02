@@ -49,6 +49,31 @@ def rotate(nums, k):
     # Step 3: Reverse the remaining n - k elements
     reverse(nums, k, n - 1)
 
+def rotateCyclic(nums, k):
+    """
+    Rotate the elements of the list nums to the right by k steps. Cyclic Replacements Implementation.
+    """
+    n = len(nums)
+    k = k % n
+    count = 0
+    start = 0
+    
+    while count < n:
+        current = start
+        prev = nums[start]
+        
+        while True:
+            next_idx = (current + k) % n
+            nums[next_idx], prev = prev, nums[next_idx]
+            current = next_idx
+            count += 1
+            
+            if start == current:
+                break
+        
+        start += 1
+
+
 # Example usage
 if __name__ == "__main__":
     # Example 1
