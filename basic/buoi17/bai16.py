@@ -23,22 +23,15 @@ numbers.sort()
 print("Mảng sắp xếp giảm dần:", numbers)
 
 # 3. Tính trung bình cộng của các phần tử lớn hơn 50 và nhỏ hơn 80
-sum_greater_than_50 = 0
-count_greater_than_50 = 0
-sum_greater_than_80 = 0
-count_greater_than_80 = 0
+sum_greater_than_50_less_80 = 0
+count_greater_than_50_less_80 = 0
 for num in numbers:
-    if num > 50:
-        sum_greater_than_50 += num
-        count_greater_than_50 += 1
-    if num > 80:
-        sum_greater_than_80 += num
-        count_greater_than_80 += 1
+    if 50 < num < 80:
+        sum_greater_than_50_less_80 += num
+        count_greater_than_50_less_80 += 1
 
-avg_greater_than_50 = sum_greater_than_50 / count_greater_than_50
-avg_greater_than_80 = sum_greater_than_80 / count_greater_than_80
-print("Trung bình cộng cấu hình lớn hơn 50:", avg_greater_than_50)
-print("Trung bình cộng cấu hình lớn hơn 80:", avg_greater_than_80)
+avg_greater_than_50_less_80 = count_greater_than_50_less_80 / count_greater_than_50_less_80
+print("Trung bình cộng cấu hình lớn hơn 50 và bé hơn 80:", avg_greater_than_50_less_80)
 
 # 4. Tìm phần tử lớn thứ ba và nhỏ thứ ba trong mảng
 print("Phần tử lớn thứ ba trong mảng:", numbers[2])
