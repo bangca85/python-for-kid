@@ -20,6 +20,7 @@ def find_most_frequent(numbers):
     frequency = {}
     for num in numbers:
         frequency[num] = frequency.get(num, 0) + 1
+    # sử dụng hàm max với giá trị key là frequency.get
     most_frequent = max(frequency, key=frequency.get)
     return most_frequent
 
