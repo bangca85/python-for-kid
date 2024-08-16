@@ -41,5 +41,5 @@ def sort_dict_by_value_manual(data):
     return sorted_dict
 
 data = {"a": 3, "b": 1, "c": 2}
-sorted_data = sort_dict_by_value(data)
+sorted_data = sort_dict_by_value_manual(data)
 print(f"Dictionary sau khi sắp xếp: {sorted_data}")
