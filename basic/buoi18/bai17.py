@@ -26,8 +26,13 @@ def sort_dict_by_value_manual(data):
     # Sắp xếp danh sách các cặp (key, value) theo giá trị
     for i in range(len(items)):
         for j in range(i + 1, len(items)):
-            if items[i][1] > items[j][1]: 
-                items[i], items[j] = items[j], items[i] 
+            value_i = items[i][1]  # Giá trị của phần tử thứ i
+            value_j = items[j][1]  # Giá trị của phần tử thứ j
+            if value_i > value_j:  # So sánh giá trị của hai phần tử
+                # Hoán đổi vị trí của hai phần tử nếu giá trị thứ i lớn hơn giá trị thứ j
+                temp = items[i]
+                items[i] = items[j]
+                items[j] = temp
 
     sorted_dict = {}
     for key, value in items:
