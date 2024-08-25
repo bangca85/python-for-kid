@@ -1,4 +1,3 @@
-
 1. **Kết quả của đoạn mã sau là gì?**
 
    ```python
@@ -191,8 +190,6 @@
       *
       *
     - d) ***
-
-
 16. **Kết quả của đoạn mã sau là gì?**
 
     ```python
@@ -279,7 +276,6 @@
     else:
         print("Lẻ")
     ```
-
     - a) Chẵn
     - b) Lẻ
     - c) Không có gì được in ra
@@ -293,7 +289,6 @@
     else:
         print("Không bằng 10")
     ```
-
     - a) Bằng 10
     - b) Không bằng 10
     - c) Không có gì được in ra
@@ -310,7 +305,6 @@
     else:
         print("Nhỏ hơn hoặc bằng 10")
     ```
-
     - a) Lớn hơn 10 và nhỏ hơn 20
     - b) Lớn hơn hoặc bằng 20
     - c) Nhỏ hơn hoặc bằng 10
@@ -324,7 +318,6 @@
     else:
         print("x không nằm trong khoảng 10 đến 40")
     ```
-
     - a) x nằm trong khoảng 10 đến 40
     - b) x không nằm trong khoảng 10 đến 40
     - c) Không có gì được in ra
@@ -338,7 +331,6 @@
     else:
         print("x nằm trong khoảng 10 đến 20")
     ```
-
     - a) x lớn hơn 20 hoặc nhỏ hơn 10
     - b) x nằm trong khoảng 10 đến 20
     - c) Không có gì được in ra
@@ -349,7 +341,6 @@
     my_list = [1, 2, 3, 4]
     print(my_list[2])
     ```
-
     - a) 1
     - b) 2
     - c) 3
@@ -360,7 +351,6 @@
     my_list = [5, 6, 7, 8]
     print(my_list[-1])
     ```
-
     - a) 5
     - b) 6
     - c) 7
@@ -372,7 +362,6 @@
     my_list.append(4)
     print(my_list)
     ```
-
     - a) `[1, 2, 3, 4]`
     - b) `[4, 1, 2, 3]`
     - c) `[1, 2, 3]`
@@ -383,7 +372,6 @@
     my_list = [1, 2, 3, 4, 5]
     print(len(my_list))
     ```
-
     - a) 4
     - b) 5
     - c) 6
@@ -395,7 +383,6 @@
     my_list.insert(1, 4)
     print(my_list)
     ```
-
     - a) `[1, 4, 2, 3]`
     - b) `[4, 1, 2, 3]`
     - c) `[1, 2, 3, 4]`
@@ -407,7 +394,6 @@
     my_list.remove(3)
     print(my_list)
     ```
-
     - a) `[1, 2, 4]`
     - b) `[1, 2, 3, 4]`
     - c) `[1, 3, 4]`
@@ -419,7 +405,6 @@
     my_list[1] = 10
     print(my_list)
     ```
-
     - a) `[1, 10, 3]`
     - b) `[10, 2, 3]`
     - c) `[1, 2, 10]`
@@ -430,7 +415,6 @@
     my_list = [1, 2, 3, 4]
     print(my_list[1:3])
     ```
-
     - a) `[1, 2]`
     - b) `[2, 3]`
     - c) `[3, 4]`
@@ -442,7 +426,6 @@
     my_list.reverse()
     print(my_list)
     ```
-
     - a) `[30, 20, 10]`
     - b) `[10, 20, 30]`
     - c) `[20, 30, 10]`
@@ -454,7 +437,6 @@
     my_list.sort()
     print(my_list)
     ```
-
     - a) `[1, 2, 3]`
     - b) `[3, 2, 1]`
     - c) `[2, 3, 1]`
@@ -465,7 +447,6 @@
     my_tuple = (1, 2, 3)
     print(my_tuple[1])
     ```
-
     - a) 1
     - b) 2
     - c) 3
@@ -476,7 +457,6 @@
     my_tuple = (4, 5, 6)
     print(len(my_tuple))
     ```
-
     - a) 2
     - b) 3
     - c) 4
@@ -487,7 +467,6 @@
     my_tuple = (7, 8, 9)
     print(my_tuple[-1])
     ```
-
     - a) 7
     - b) 8
     - c) 9
@@ -499,7 +478,6 @@
     my_tuple[1] = 10
     print(my_tuple)
     ```
-
     - a) `[1, 10, 3]`
     - b) `(1, 10, 3)`
     - c) `[1, 2, 3]`
@@ -507,18 +485,13 @@
 40. **Kết quả của đoạn mã sau là gì?**
 
     ```python
-    my_tuple =
-
-    ```
-
- (1, 2, 3)
+    my_tuple = (1, 2, 3)
     print(my_tuple[1:3])
     ```
     - a) `(1, 2)`
     - b) `(2, 3)`
     - c) `[2, 3]`
     - d) `[1, 2, 3]`
-
 41. **Kết quả của đoạn mã sau là gì?**
 
     ```python
